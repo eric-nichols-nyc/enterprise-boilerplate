@@ -27,7 +27,7 @@ import {
 import List from "./_components/list";
 import Link from "next/link";
 
-export function DragDropPage() {
+function DragDropPage() {
   return (
     <div className="flex flex-col">
       <h1 className="text-2xl font-bold">Drag and Drop Items Page</h1>  
