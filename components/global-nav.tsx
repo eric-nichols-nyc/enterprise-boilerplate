@@ -4,23 +4,11 @@ import Link from "next/link";
 import { useState } from "react";
 import { items } from "@/constants";
 import { Button } from "./ui/button";
-import { ThemeToggle } from "./theme-switcher";
 export const GlobalNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const close = () => setIsOpen(false);
   return (
-    <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
-      <div className="flex h-14 items-center px-4 py-4 lg:h-auto">
-        <Link
-          href="/"
-          className="group flex w-full items-center gap-x-2.5"
-          onClick={close}
-        >
-          <h3 className="font-semibold tracking-wide group-hover:text-gray-50">
-            Home
-          </h3>
-        </Link>
-      </div>
+    <div className="flex w-full flex-col border-b border-gray-800 lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
       <button
         type="button"
         className="group absolute right-0 top-0 flex h-14 items-center gap-x-2 px-4 lg:hidden"
@@ -57,8 +45,6 @@ export const GlobalNav = () => {
                 ))
         }
         </nav>
-        <ThemeToggle />
-
       </div>
     </div>
   );

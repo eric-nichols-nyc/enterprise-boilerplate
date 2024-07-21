@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import { SortableList } from "../../../components/drag-drop-list/sortable-list";
+import { SortableList } from "@/components/drag-drop-list/sortable-list";
 import { EditableText } from "@/components/editable-text";
 import { calculatePosition } from "@/utils/position";
 
