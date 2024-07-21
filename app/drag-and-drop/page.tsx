@@ -27,7 +27,7 @@ import {
 import List from "./_components/list";
 import Link from "next/link";
 
-export function TabsDemo() {
+export function DragDropPage() {
   return (
     <div className="flex flex-col">
       <h1 className="text-2xl font-bold">Drag and Drop Items</h1>  
@@ -50,4 +50,4 @@ export function TabsDemo() {
 }
 
 
-export default TabsDemo;
+export default DragDropPage;
