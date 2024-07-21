@@ -30,7 +30,7 @@ import Link from "next/link";
 export function DragDropPage() {
   return (
     <div className="flex flex-col">
-      <h1 className="text-2xl font-bold">Drag and Drop Items</h1>  
+      <h1 className="text-2xl font-bold">Drag and Drop Items Page</h1>  
       <div className="border flex justify-center">
       <Tabs defaultValue="account" className="w-[800px]">
         <TabsList className="grid w-full grid-cols-2">
