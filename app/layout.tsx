@@ -31,7 +31,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
           <GlobalHeader />
-            <div className="mx-auto w-full space-y-8 px-2 pt-20 lg:px-8 lg:py-8">
+            <div className="mx-auto w-full lg:px-8">
                 <div className="rounded-lg p-3.5 lg:p-6">{children}</div>
             </div>
           </ThemeProvider>

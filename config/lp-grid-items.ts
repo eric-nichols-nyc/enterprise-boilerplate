@@ -48,5 +48,10 @@ export const tech = [
         "name": "ESlint & Prettier",
         "image": "/next.svg",
         "description": "Tools for maintaining code quality and formatting."
+    },
+    {
+        "name":"Framer motion",
+        "image": "/next.svg",
+        "description": "A library for creating animations and interactions in React."
     }
 ]

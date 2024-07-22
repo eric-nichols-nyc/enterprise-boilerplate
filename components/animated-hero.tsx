@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 const Hero = () => {
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-900">
+    <div className="flex items-center justify-center h-[calc(100vh-74px)] bg-gray-900">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -23,13 +23,6 @@ const Hero = () => {
         <p className="text-xl text-gray-300 mb-8">
           This is a hero section with some animation.
         </p>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg"
-        >
-          Get Started
-        </motion.button>
       </motion.div>
     </div>
   );
