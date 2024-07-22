@@ -1,5 +1,4 @@
 import { ComponentsNav } from '@/components/components-nav';
-import { GlobalNav } from '@/components/global-nav';
 import React from 'react';
 
 interface LobyLayoutProps
@@ -10,9 +9,9 @@ interface LobyLayoutProps
 export default async function ComponentsLayout({ children }: LobyLayoutProps) {
 
   return (
-    <div className="relative flex w-full min-h-screen flex-col">
-      <main className="flex">
-        <div className="mt-20 flex w-full">
+    <div className="relative flex w-full h-full flex-col">
+      <main className="flex container border">
+        <div className="flex w-full">
           <ComponentsNav />
          {children}
         </div>
