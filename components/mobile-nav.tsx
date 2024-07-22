@@ -17,7 +17,7 @@ export const MobileNav = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const handleToggle = (index:number) => {
-    setOpenIndex(openIndex === index ? null : index);
+    setOpenIndex(openIndex === index ? null : index)
   };
   if (isDesktop) return null;
   return (

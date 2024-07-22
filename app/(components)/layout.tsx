@@ -1,12 +1,7 @@
 import { ComponentsNav } from '@/components/components-nav';
 import React from 'react';
 
-interface LobyLayoutProps
-  extends React.PropsWithChildren<{
-    modal: React.ReactNode
-  }> {}
-
-export default async function ComponentsLayout({ children }: LobyLayoutProps) {
+export default async function ComponentsLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="relative flex w-full h-full flex-col">
