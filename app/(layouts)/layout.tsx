@@ -3,7 +3,7 @@ import React from 'react';
 
 interface LobyLayoutProps
   extends React.PropsWithChildren<{
-    modal: React.ReactNode
+    children: React.ReactNode
   }> {}
 
 export default async function ComponentsLayout({ children }: LobyLayoutProps) {
