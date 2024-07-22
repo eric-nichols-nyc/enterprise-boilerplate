@@ -10,6 +10,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { siteConfig } from "@/config/site";
+import Link from "next/link";
 
 export const MobileNav = () => {
   const isDesktop = useMediaQuery("(min-width: 1024px)");
@@ -33,27 +35,27 @@ export const MobileNav = () => {
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="pl-1 pr-0 pt-9">
+        <Link href="/">Home</Link>
         <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="item-1">
-            <AccordionTrigger>Is it accessible?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger>Is it styled?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It comes with default styles that matches the other
-              components&apos; aesthetic.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger>Is it animated?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It&apos;s animated by default, but you can disable it if you
-              prefer.
-            </AccordionContent>
-          </AccordionItem>
+          {siteConfig.mainNav.filter((link) => link.href !== "/").map((navLink, index) => (
+            <AccordionItem key={index} value={navLink.title}>
+              <AccordionTrigger onClick={() => handleToggle(index)}>
+                {navLink.title}
+              </AccordionTrigger>
+              <AccordionContent>
+                {navLink.items?.map((child, index) => (
+                  <Link
+                    key={index}
+                    href={child.href}
+                    className="block py-2 px-4 text-sm font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100"
+                  >
+                    {child.title}
+                  </Link>
+                
+                ))}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
         </Accordion>
       </SheetContent>
     </Sheet>
