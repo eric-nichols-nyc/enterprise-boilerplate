@@ -14,12 +14,15 @@ export const MainNav = () => {
           href="/"
           className="group flex w-full items-center gap-x-2.5"
         >
-          <Logo />
+          <div className="size-9">
+           <Logo />
+          </div>
+          <h5 className="font-semibold">Enterprise</h5>
         </Link>
         <ComponentsDropdown />
         <LayoutsDropdown />
       </div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 items-center">
         <User />
         <ThemeToggle />
         <div>

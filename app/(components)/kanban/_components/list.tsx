@@ -39,7 +39,7 @@ const List = () => {
         <div className="h-full w-full flex justify-center">
             <div className="size-full max-w-6xl flex flex-col items-center">
                 <h1>Drag and Drop List Example</h1>
-                <div className="w-full max-w-[500px] border-2 verflow-y-scroll">
+                <div className="w-[500px] border-2 border-red-500 overflow-y-scroll">
                     {
                         items && items.length > 0 ? <SortableList items={items} /> : null
                     }

@@ -1,7 +1,8 @@
 import React from 'react'
+import { Icons } from './icons'
 
 export const Logo = () => {
   return (
-    <div>Logo</div>
+    <Icons.logo />
   )
 }

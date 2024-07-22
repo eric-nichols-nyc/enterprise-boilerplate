@@ -30,8 +30,9 @@ import Link from "next/link";
 function DragDropPage() {
   return (
     <div className="flex flex-col w-full">
-      <div className="border flex justify-center">     
-          <List />
+      <h1 className="text-2xl font-bold">Kanban</h1>  
+      <div className="border flex w-full justify-center">
+        columns go here
       </div>
     </div>
   )

@@ -22,17 +22,16 @@ export const items:{name:string; items:Item[]}[] = [
         name: "Components",
         items: [
             {
-                name: "Drag and drop",
-                slug: "/drag-and-drop"
-            }
-        ]
-    },
-    {
-        name: "File Conventions",
-        items: [
+                name: "Drag and drop grid",
+                slug: "/drag-and-drop-grid"
+            },
             {
-                name: "Loading",
-                slug: "/contact"
+                name: "Drag and drop list",
+                slug: "/drag-and-drop"
+            },
+            {
+                name: "Kanban",
+                slug: "/kanban"
             }
         ]
     }

@@ -4,11 +4,11 @@ import Link from "next/link";
 import { useState } from "react";
 import { items } from "@/config/constants";
 import { Button } from "./ui/button";
-export const GlobalNav = () => {
+export const ComponentsNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const close = () => setIsOpen(false);
   return (
-    <div className="flex w-full flex-col border-b border-gray-800 lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
+    <div id="components-nav" className="hidden lg:flex flex-col border-b border-gray-800 lg:bottom-0 lg:z-auto w-60 lg:border-b-0 lg:border-r lg:border-gray-800">
       <button
         type="button"
         className="group absolute right-0 top-0 flex h-14 items-center gap-x-2 px-4 lg:hidden"
@@ -25,25 +25,20 @@ export const GlobalNav = () => {
           hidden: !isOpen,
         })}
       >
-        <nav className="space-y-6 px-2 pb-24 pt-5">
-        {
-            items.map(({ name, items }) => (
-                <div key={name}>
-                    <h3 className="font-semibold text-sm px-4 pb-2">
+        <nav className="px-2 pb-24 pt-5">
+          <h3 className="font-semibold text-sm px-2 py-1">
+            {items[1].name}
+          </h3>
+          <ul>
+            {
+              items[1].items.map(({ name, slug }) => (
+                <li className="block px-2 py-1 text-sm" key={slug}>
+                  <Link href={slug} >
                     {name}
-                    </h3>
-                    <ul className="space-y-2">
-                    {items.map(({ name, slug }) => (
-                        <li key={slug}>
-                        <Link href={slug} className="block px-4 py-2">
-                            {name}
-                        </Link>
-                        </li>
-                    ))}
-                    </ul>
-                </div>
-                ))
-        }
+                  </Link>
+                </li>
+              ))}
+          </ul>
         </nav>
       </div>
     </div>

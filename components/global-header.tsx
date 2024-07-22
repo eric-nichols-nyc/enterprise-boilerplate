@@ -7,9 +7,11 @@ import { MobileNav } from './mobile-nav'
 
 export const GlobalHeader = () => {
     return (
-        <div className="border border-white flex justify-between">
-            <MainNav />
-            <MobileNav />
+        <div className="sticky top-0 z-50 w-full border-b bg-background flex justify-between">
+             <div className="container flex h-16 items-center">
+                <MainNav />
+                <MobileNav />
+            </div>
         </div>
     )
 }

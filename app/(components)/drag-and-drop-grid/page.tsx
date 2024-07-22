@@ -30,8 +30,8 @@ import Link from "next/link";
 function DragDropPage() {
   return (
     <div className="flex flex-col w-full">
-      <div className="border flex justify-center">     
-          <List />
+      <div className="flex justify-center w-full">
+          <Grid />
       </div>
     </div>
   )
