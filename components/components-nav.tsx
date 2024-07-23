@@ -13,7 +13,7 @@ export const ComponentsNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const close = () => setIsOpen(false);
   return (
-    <div id="components-nav" className="hidden fixed top-14 lg:flex flex-col h-full overflow-y-auto border-b border-gray-800 lg:bottom-0 lg:z-auto w-60 lg:border-b-0 lg:border-r lg:border-gray-800">
+    <div id="components-nav" className="hidden fixed top-14 lg:flex flex-col h-full overflow-y-auto border-gray-400 lg:bottom-0 lg:z-auto w-60 lg:border-b-0 lg:border-r lg:border-gray-200">
       <button
         type="button"
         className="group absolute right-0 top-0 flex h-14 items-center gap-x-2 px-4 lg:hidden"

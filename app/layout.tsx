@@ -31,7 +31,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
           <GlobalHeader />
-            <div className="flex-1 w-full lg:px-8">
+            <div className="container flex-1 w-full lg:px-8">
                 <div className="flex-1">{children}</div>
             </div>
           </ThemeProvider>
