@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import {components} from "@/config/constants"
 import { AuthDropdown } from "./auth-dropdown";
+import { SearchCommand } from "./search-command";
 export const MainNav = () => {
   return (
     <div className="hidden lg:flex w-full justify-between">
@@ -36,7 +37,7 @@ export const MainNav = () => {
         <AuthDropdown />
         <ThemeToggle />
         <div>
-          <SearchIcon />
+          <SearchCommand />
         </div>
         <div>
           <a href="https://github.com/eric-nichols-nyc/enterprise-boilerplate"  target="_blank" rel="noopener noreferrer">
