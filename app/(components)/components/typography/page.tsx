@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 import React from "react";
 
-export function TypographyPage() {
+function TypographyPage() {
   return (
     <div className="container">
       <div className="py-12 px-8">
