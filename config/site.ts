@@ -13,12 +13,8 @@ export const siteConfig = {
             href: "/components/forms"
         },
         {
-            title: "Cards",
-            href: "/components/cards"
-        },
-        {
             title: "Alert Dialog",
-            href: "/components/modals"
+            href: "/components/alert-dialog"
         },
         {
             title: "Typography",
