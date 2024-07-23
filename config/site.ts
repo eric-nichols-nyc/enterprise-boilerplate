@@ -17,24 +17,8 @@ export const siteConfig = {
             href: "/components/cards"
         },
         {
-            title: "Modals",
+            title: "Alert Dialog",
             href: "/components/modals"
-        },
-        {
-            title: "Layouts",
-            href: "/components/layouts"
-        },
-        {
-            title: "Navigation",
-            href: "/components/navigation"
-        },
-        {
-            title: "Tables",
-            href: "/components/tables"
-        },
-        {
-            title: "Toasts",
-            href: "/components/toasts"
         },
         {
             title: "Typography",
