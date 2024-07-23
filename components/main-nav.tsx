@@ -17,29 +17,31 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import {components} from "@/config/constants"
+import { AuthDropdown } from "./auth-dropdown";
 export const MainNav = () => {
   return (
     <div className="hidden lg:flex w-full justify-between">
-      <div className="flex gap-2">
+      <div className="flex gap-2 items-center text-sm">
         <Link
           href="/"
-          className="group flex w-full items-center gap-x-2.5"
+          className="group flex w-full justify-center gap-x-2.5"
         >
-          <div className="size-9">
+          <div className="flex justify-center size-14">
            <Logo />
           </div>
-          <h5 className="font-semibold">Enterprise</h5>
         </Link>
-        <Link href="/components/buttons">Components</Link>
+        <Link className="font-semibold" href="/components/buttons">Components</Link>
       </div>
       <div className="flex gap-2 items-center">
-        <User />
+        <AuthDropdown />
         <ThemeToggle />
         <div>
           <SearchIcon />
         </div>
         <div>
+          <a href="https://github.com/eric-nichols-nyc/enterprise-boilerplate"  target="_blank" rel="noopener noreferrer">
           <GithubIcon />
+          </a>
         </div>
       </div>
     </div>

@@ -15,7 +15,6 @@ const Page1 = () => {
             ))}
           </div>
         </main>
-
         <nav className="order-first sm:w-32 lg:w-52  bg-purple-200 overflow-y-auto">
           {Array.from({ length: 35 }).map((_, i) => (
             <div key={i} className="h-[35px] border">
