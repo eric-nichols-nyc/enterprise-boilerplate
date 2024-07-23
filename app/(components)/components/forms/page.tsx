@@ -11,7 +11,7 @@ function FormsPage() {
   return (
     <div className="flex flex-col w-full">
       <h1 className="text-2xl font-bold">Forms</h1>  
-      <div className="border flex w-full justify-center">
+      <div className="border flex w-full justify-center py-8">
         <CardWithForm />
       </div>
     </div>

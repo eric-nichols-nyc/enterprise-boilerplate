@@ -53,6 +53,7 @@ export function CardWithForm() {
       setTimeout(() => {
         setIsLoading(false);
         setIsSuccess(true);
+        setErrors({ name: undefined, framework: undefined });
         formRef.current?.reset();
       }, 3000);
     } else {
