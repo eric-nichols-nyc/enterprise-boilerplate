@@ -1,8 +1,46 @@
-import { items } from "./constants";
+import { components, items } from "./constants";
 
 
 
 export const siteConfig = {
+    components: [
+        {
+            title: "Buttons",
+            href: "/components/buttons"
+        },
+        {
+            title: "Forms",
+            href: "/components/forms"
+        },
+        {
+            title: "Cards",
+            href: "/components/cards"
+        },
+        {
+            title: "Modals",
+            href: "/components/modals"
+        },
+        {
+            title: "Layouts",
+            href: "/components/layouts"
+        },
+        {
+            title: "Navigation",
+            href: "/components/navigation"
+        },
+        {
+            title: "Tables",
+            href: "/components/tables"
+        },
+        {
+            title: "Toasts",
+            href: "/components/toasts"
+        },
+        {
+            title: "Typography",
+            href: "/components/typography"
+        }
+    ],
     mainNav: [
         {
             title: "Home",

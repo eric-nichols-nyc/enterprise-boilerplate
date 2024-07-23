@@ -3,10 +3,13 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useState } from "react";
 import { items } from "@/config/constants";
+import { siteConfig } from "@/config/site";
 import { Button } from "./ui/button";
 import { usePathname } from "next/navigation";
 export const ComponentsNav = () => {
   const params = usePathname();
+  const components = siteConfig.components;
+
   const [isOpen, setIsOpen] = useState(false);
   const close = () => setIsOpen(false);
   return (
@@ -33,10 +36,10 @@ export const ComponentsNav = () => {
           </h3>
           <ul>
             {
-              items[1].items.map(({ name, slug }) => (
-                <li className={"block px-2 py-1 text-sm"+(params === slug ? " bg-gray-800 text-white" : "")} key={slug}>
-                  <Link href={slug} >
-                    {name}
+              components.map(({ title, href }) => (
+                <li className={"block px-2 py-1 text-sm"+(params === href ? " bg-gray-800 text-white" : "")} key={href}>
+                  <Link href={href} >
+                    {title}
                   </Link>
                 </li>
               ))}
