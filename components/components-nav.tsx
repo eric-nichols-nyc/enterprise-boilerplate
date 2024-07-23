@@ -4,11 +4,13 @@ import Link from "next/link";
 import { useState } from "react";
 import { items } from "@/config/constants";
 import { Button } from "./ui/button";
+import { usePathname } from "next/navigation";
 export const ComponentsNav = () => {
+  const params = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const close = () => setIsOpen(false);
   return (
-    <div id="components-nav" className="hidden lg:flex flex-col border-b border-gray-800 lg:bottom-0 lg:z-auto w-60 lg:border-b-0 lg:border-r lg:border-gray-800">
+    <div id="components-nav" className="hidden fixed top-14 lg:flex flex-col h-full overflow-y-auto border-b border-gray-800 lg:bottom-0 lg:z-auto w-60 lg:border-b-0 lg:border-r lg:border-gray-800">
       <button
         type="button"
         className="group absolute right-0 top-0 flex h-14 items-center gap-x-2 px-4 lg:hidden"
@@ -32,7 +34,7 @@ export const ComponentsNav = () => {
           <ul>
             {
               items[1].items.map(({ name, slug }) => (
-                <li className="block px-2 py-1 text-sm" key={slug}>
+                <li className={"block px-2 py-1 text-sm"+(params === slug ? " bg-gray-800 text-white" : "")} key={slug}>
                   <Link href={slug} >
                     {name}
                   </Link>
