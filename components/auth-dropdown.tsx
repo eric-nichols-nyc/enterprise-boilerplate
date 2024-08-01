@@ -1,13 +1,3 @@
-// import React from 'react'
-
-// const AuthDropdown = () => {
-//   return (
-//     <div>AuthDropdown</div>
-//   )
-// }
-
-// export default AuthDropdown
-
 import {
     Cloud,
     CreditCard,
@@ -25,7 +15,6 @@ import {
     Users,
   } from "lucide-react"
   
-  import { Button } from "@/components/ui/button"
   import {
     DropdownMenu,
     DropdownMenuContent,
@@ -39,13 +28,13 @@ import {
     DropdownMenuSubContent,
     DropdownMenuSubTrigger,
     DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
+  } from "../components/ui/dropdown-menu"
   
   export function AuthDropdown() {
     return (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-         <User />
+         <User data-test-id="user-dropdown"/>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-56">
           <DropdownMenuLabel>My Account</DropdownMenuLabel>

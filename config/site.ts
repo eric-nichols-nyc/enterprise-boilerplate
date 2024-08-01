@@ -19,6 +19,14 @@ export const siteConfig = {
         {
             title: "Typography",
             href: "/components/typography"
+        },
+        {
+            title: "Kanban",
+            href: "/components/kanban"
+        },
+        {
+            title: "Chat",
+            href: "/components/chat"
         }
     ],
     mainNav: [
