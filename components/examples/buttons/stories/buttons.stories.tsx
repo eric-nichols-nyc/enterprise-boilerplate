@@ -1,29 +1,30 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { LoaderButton } from "../components/loader-button";
+import { IconButton } from "../components/icon-button";
 
-function DemoContainer({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) {
-  return (
-    <div
-      className={`flex flex-col items-center justify-center h-96 space-y-4 ${className}`}
-      {...props}
-    />
-  );
-}
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const meta = {
   title: "Examples/buttons",
   component: (args) => {
     return (
-      <div className="flex">
-        <DemoContainer>
-          <LoaderButton {...args} />
-        </DemoContainer>
-        <DemoContainer>
-          <LoaderButton {...args} />
-        </DemoContainer>
+      <div className="w-full grid grid-cols-2 gap-4">
+        <Card className="bg-white p-4 rounded-md shadow-sm border space-y-2">
+          <CardHeader>
+            <CardTitle>Loading button</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <LoaderButton {...args} />
+          </CardContent>
+        </Card>
+        <Card className="bg-white p-4 rounded-md shadow-sm border space-y-2">
+          <CardHeader>
+            <CardTitle>Icon button</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <IconButton {...args} />
+          </CardContent>
+        </Card>
       </div>
     );
   },
@@ -34,7 +35,7 @@ const meta = {
   argTypes: {
     onClick: { action: "clicked" },
   },
-} satisfies Meta<{}>
+} satisfies Meta<{}>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
