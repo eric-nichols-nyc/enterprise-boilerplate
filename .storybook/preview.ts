@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/react";
+import "../app/globals.css";
 
 const preview: Preview = {
   parameters: {
@@ -8,6 +9,12 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    options: {
+      storySort: {
+        method: 'alphabetical',
+        order: ["Introduction","Examples","Shadcn","Colors","Typography"],
+      },
+    }
   },
 };
 
