@@ -10,7 +10,10 @@
     "lint:fix": "next lint --fix",
     "prettier": "prettier --check \"**/*.{js,jsx,ts,tsx}\"",
     "prettier:fix": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
-    "test": "jest --watch"
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.2.2",
@@ -46,9 +49,19 @@
     "zustand": "^4.5.4"
   },
   "devDependencies": {
-    "@types/jest": "29.5.11",
-    "@testing-library/jest-dom": "6.1.5",
+    "@chromatic-com/storybook": "^1.6.1",
+    "@storybook/addon-essentials": "^8.2.7",
+    "@storybook/addon-interactions": "^8.2.7",
+    "@storybook/addon-links": "^8.2.7",
+    "@storybook/addon-onboarding": "^8.2.7",
+    "@storybook/blocks": "^8.2.7",
+    "@storybook/nextjs": "^8.2.7",
+    "@storybook/react": "^8.2.7",
+    "@storybook/test": "^8.2.7",
+    "@testing-library/jest-dom": "^6.2.0",
     "@testing-library/react": "14.1.2",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "29.5.11",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -67,7 +80,9 @@
     "postcss": "^8",
     "prettier": "3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.7",
+    "storybook": "^8.2.7",
     "tailwindcss": "^3.3.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   },
   "module": "index.ts",
