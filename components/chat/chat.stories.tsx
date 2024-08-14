@@ -7,7 +7,7 @@ const args = {
   isMobile: false,
 };
 const meta = {
-  title: "Examples/chat",
+  title: "Components/Chat",
   component: (args) => <Chat {...args}/>,
   parameters: {
     layout: "centered",

@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useState } from "react";
 import { items } from "@/config/constants";
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/config/constants";
 import { Button } from "./ui/button";
 import { usePathname } from "next/navigation";
 export const ComponentsNav = () => {

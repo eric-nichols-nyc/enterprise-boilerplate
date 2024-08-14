@@ -4,6 +4,114 @@ export type Item ={
     discription?: string;
 }
 
+export const siteConfig = {
+    components: [
+        {
+            title: "Buttons",
+            href: "/components/buttons"
+        },
+        {
+            title: "Forms",
+            href: "/components/forms"
+        },
+        {
+            title: "Alert Dialog",
+            href: "/components/alert-dialog"
+        },
+        {
+            title: "Typography",
+            href: "/components/typography"
+        },
+        {
+            title: "Kanban",
+            href: "/components/kanban"
+        },
+        {
+            title: "Chat",
+            href: "/components/chat"
+        },
+        {
+            title: "Carousel",
+            href: "/components/carousel"
+        }
+    ],
+    mainNav: [
+        {
+            title: "Home",
+            href: "/",
+       
+        },
+        {
+            title: "Components",
+            href: undefined,
+            items: [
+                {
+                    title: "Buttons",
+                    href: "/components/buttons"
+                },
+                {
+                    title: "Forms",
+                    href: "/components/forms"
+                },
+                {
+                    title: "Cards",
+                    href: "/components/cards"
+                },
+                {
+                    title: "Modals",
+                    href: "/components/modals"
+                },
+                {
+                    title: "Layouts",
+                    href: "/components/layouts"
+                },
+                {
+                    title: "Navigation",
+                    href: "/components/navigation"
+                },
+                {
+                    title: "Tables",
+                    href: "/components/tables"
+                },
+                {
+                    title: "Toasts",
+                    href: "/components/toasts"
+                },
+                {
+                    title: "Typography",
+                    href: "/components/typography"
+                }
+            ]
+        },
+        {
+            title: "Layouts",
+            href: undefined,
+            items: [
+                {
+                    title: "Auth",
+                    href: "/layouts/auth"
+                },
+                {
+                    title: "Components",
+                    href: "/layouts/components"
+                },
+                {
+                    title: "Dashboard",
+                    href: "/layouts/dashboard"
+                },
+                {
+                    title: "Landing",
+                    href: "/layouts/landing"
+                },
+                {
+                    title: "Profile",
+                    href: "/layouts/profile"
+                }
+            ]
+        }
+    ]
+}
+
 export const items:{name:string; items:Item[]}[] = [
     {
         name: "Layouts",

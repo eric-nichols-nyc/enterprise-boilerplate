@@ -10,7 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/config/constants";
 import Link from "next/link";
 
 export const MobileNav = () => {
