@@ -33,6 +33,9 @@ export const siteConfig = {
         {
             title: "Carousel",
             href: "/components/carousel"
+        },   {
+            title: "Cards",
+            href: "/components/cards"
         }
     ],
     mainNav: [

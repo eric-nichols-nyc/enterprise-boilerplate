@@ -38,15 +38,14 @@ const Navigation = () => {
       <aside
         ref={sidebarRef}
         className={cn(
-          "group/sidebar relative h-auto bg-secondary overflow-hidden flex flex-col w-72 z-10 transition-all ease-in-out duration-300 h-full",
+          "group/sidebar relative w-auto bg-secondary overflow-hidden flex flex-col z-10 transition-all ease-in-out duration-300 h-full",
           isCollapsed && "ml-[-288px] overflow-visible"
         )}
       >
         <div className="opacity-0 group-hover/sidebar:opacity-100 transition-opacity duration-300 cursor-ew-resize absolute h-full w-1 bg-primary/10 right-0 top-0" />
-        <div className="h-8 m-4 border">
-          <div>I am the user options</div>
+        <div className="h-8 border">
           <div role="button" className={cn
-          ("absolute top-3 right-2",
+          ("absolute top-3 right-4",
           isCollapsed && "mr-[-40px]"
           )}>
             <div onClick={resetWidth}>
