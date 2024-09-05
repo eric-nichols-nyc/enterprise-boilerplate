@@ -31,7 +31,7 @@ const navigationItems = [
   },
   {
     title: "Layouts",
-    href: "/layouts",
+    href: "/sliding-sidebar",
   },
 ];
 export const MainNav = () => {

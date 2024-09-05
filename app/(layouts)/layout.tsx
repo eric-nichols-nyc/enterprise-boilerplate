@@ -9,11 +9,10 @@ interface LobyLayoutProps
 export default async function ComponentsLayout({ children }: LobyLayoutProps) {
 
   return (
-    <div className="relative flex w-full min-h-screen flex-col">
-      <main className="flex">
-        <GlobalNav />
+    <div className="relative flex w-full min-h-screen flex-col borde bg-slate-600">
+      <div className="flex h-full">
         {children}
-      </main>
+      </div>
     </div>
   )
 }

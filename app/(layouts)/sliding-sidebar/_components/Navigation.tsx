@@ -38,7 +38,7 @@ const Navigation = () => {
       <aside
         ref={sidebarRef}
         className={cn(
-          "group/sidebar relative h-auto bg-secondary overflow-hidden flex flex-col w-72 z-10 transition-all ease-in-out duration-300",
+          "group/sidebar relative h-auto bg-secondary overflow-hidden flex flex-col w-72 z-10 transition-all ease-in-out duration-300 h-full",
           isCollapsed && "ml-[-288px] overflow-visible"
         )}
       >
