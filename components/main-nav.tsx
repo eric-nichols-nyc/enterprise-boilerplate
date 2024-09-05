@@ -5,8 +5,8 @@ import { ThemeToggle } from "./theme-switcher";
 import Link from "next/link";
 import { ComponentsDropdown } from "./components-dropdown";
 import { LayoutsDropdown } from "./layouts-dropdown";
-import { cn } from "@/lib/utils"
-import { Icons } from "@/components/icons"
+import { cn } from "@/lib/utils";
+import { Icons } from "@/components/icons";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -15,23 +15,43 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import {components} from "@/config/constants"
+} from "@/components/ui/navigation-menu";
+import { components } from "@/config/constants";
 import { AuthDropdown } from "./auth-dropdown";
 import { SearchCommand } from "./search-command";
+
+const navigationItems = [
+  {
+    title: "Components",
+    href: "/components/buttons",
+  },
+  {
+    title: "Onboarda",
+    href: "/onboarda",
+  },
+  {
+    title: "Layouts",
+    href: "/layouts",
+  },
+];
 export const MainNav = () => {
   return (
     <div className="hidden lg:flex w-full justify-between">
       <div className="flex gap-2 items-center text-sm">
-        <Link
-          href="/"
-          className="group flex w-full justify-center gap-x-2.5"
-        >
+        <Link href="/" className="group flex w-full justify-center gap-x-2.5">
           <div className="flex justify-center size-14">
-           <Logo />
+            <Logo />
           </div>
         </Link>
-        <Link className="font-semibold" href="/components/buttons">Components</Link>
+        {navigationItems.map((item, index) => (
+          <Link
+            key={index}
+            href={item.href}
+            className="flex items-center gap-1"
+          >
+            <div>{item.title}</div>
+          </Link>
+        ))}
       </div>
       <div className="flex gap-2 items-center">
         <AuthDropdown />
@@ -40,8 +60,12 @@ export const MainNav = () => {
           <SearchCommand />
         </div>
         <div>
-          <a href="https://github.com/eric-nichols-nyc/enterprise-boilerplate"  target="_blank" rel="noopener noreferrer">
-          <GithubIcon />
+          <a
+            href="https://github.com/eric-nichols-nyc/enterprise-boilerplate"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GithubIcon />
           </a>
         </div>
       </div>
@@ -71,6 +95,6 @@ const ListItem = React.forwardRef<
         </a>
       </NavigationMenuLink>
     </li>
-  )
-})
-ListItem.displayName = "ListItem"
+  );
+});
+ListItem.displayName = "ListItem";
